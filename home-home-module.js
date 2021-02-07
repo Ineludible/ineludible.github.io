@@ -46,7 +46,7 @@ HomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>ARLauncher</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <iframe src=\"/assets/aframe-ar.html\"></iframe>\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>ARLauncher</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <iframe>\n      <a-scene\n      embedded\n      loading-screen=\"enabled: false;\"\n      arjs=\"sourceType: webcam; debugUIEnabled: false;\">\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Tecnologia')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.391993; longitude: -0.514455;\"\n          ></a-image>\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Ciencias')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.391893332552925; longitude: -0.5145678017288448;\"\n          ></a-image>\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Filosofía')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.39183446909887; longitude: -0.514760920777917;\"\n          ></a-image>\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Matemáticas')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.39211617233782; longitude: -0.5146911833435298;\"\n          ></a-image>\n\n      <a-camera gps-camera rotation-reader></a-camera>\n  </a-scene></iframe>\n</ion-content>");
 
 /***/ }),
 
@@ -120,14 +120,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.page.scss */ "f6od");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/camera-preview/ngx */ "8Y4A");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
+
 
 
 
 
 
 let HomePage = class HomePage {
-    constructor(cameraPreview) {
+    constructor(cameraPreview, alertController) {
         this.cameraPreview = cameraPreview;
+        this.alertController = alertController;
         // camera options (Size and location). In the following example, the preview uses the rear camera and display the preview in the back of the webview
         const cameraPreviewOpts = {
             x: 0,
@@ -150,9 +153,22 @@ let HomePage = class HomePage {
           });
           */
     }
+    presentAlert(site) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const alert = yield this.alertController.create({
+                cssClass: 'my-custom-class',
+                header: 'Alert',
+                subHeader: 'Subtitle',
+                message: site,
+                buttons: ['OK']
+            });
+            yield alert.present();
+        });
+    }
 };
 HomePage.ctorParameters = () => [
-    { type: _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_4__["CameraPreview"] }
+    { type: _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_4__["CameraPreview"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"] }
 ];
 HomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
