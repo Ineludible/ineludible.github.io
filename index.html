@@ -1,45 +1,27 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            embedded
-            loading-screen="enabled: false;"
-            arjs="sourceType: webcam; debugUIEnabled: false;"
-        >
-                <a-image
-                    src="assets/asset.png"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 38.391993; longitude: -0.514455;"
-                ></a-image>
-                <a-image
-                    src="assets/asset.png"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 38.391893332552925; longitude: -0.5145678017288448;"
-                ></a-image>
-                <a-image
-                    src="assets/asset.png"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 38.39183446909887; longitude: -0.514760920777917;"
-                ></a-image>
-                <a-image
-                    src="assets/asset.png"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 38.39211617233782; longitude: -0.5146911833435298;"
-                ></a-image>
+<head>
+  <meta charset="utf-8"/>
+  <title>Ionic App</title>
 
-            <a-camera gps-camera rotation-reader></a-camera>
-        </a-scene>
-    </body>
+  <base href="/"/>
+
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+  
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png"/>
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<link rel="stylesheet" href="styles.css"></head>
+
+<body>
+  <app-root></app-root>
+<script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
+
 </html>
