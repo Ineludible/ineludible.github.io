@@ -46,7 +46,7 @@ HomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>ARLauncher</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n      <a-scene\n      embedded\n      loading-screen=\"enabled: false;\"\n      arjs=\"sourceType: webcam; debugUIEnabled: false;\">\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Tecnologia')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.391993; longitude: -0.514455;\"\n          ></a-image>\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Ciencias')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.391893332552925; longitude: -0.5145678017288448;\"\n          ></a-image>\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Filosofía')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.39183446909887; longitude: -0.514760920777917;\"\n          ></a-image>\n          <a-image\n              src=\"assets/asset.png\"\n              (click)=\"presentAlert('Matemáticas')\"\n              look-at=\"[gps-camera]\"\n              scale=\"1 1 1\"\n              gps-entity-place=\"latitude: 38.39211617233782; longitude: -0.5146911833435298;\"\n          ></a-image>\n\n      <a-camera gps-camera rotation-reader></a-camera>\n  </a-scene>\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>ARLauncher</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <iframe src=\"/assets/aframe-ar.html\"></iframe>\n</ion-content>");
 
 /***/ }),
 
@@ -101,7 +101,7 @@ HomePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("a-scene {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXGhvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7QUFDRiIsImZpbGUiOiJob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImEtc2NlbmUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGJvcmRlcjogbm9uZTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("iframe {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXGhvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7QUFDRiIsImZpbGUiOiJob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlmcmFtZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgYm9yZGVyOiBub25lO1xufSJdfQ== */");
 
 /***/ }),
 
